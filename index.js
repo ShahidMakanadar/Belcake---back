@@ -402,7 +402,7 @@ app.post('/forgotPassword', async (req, res) => {
         }
         else {
             const key = process.env.JWT_PASSWORD_KEY;
-            const token = jwt.sign({ _id: user._id }, key, { expiresIn: "10m" })
+            const token = Jwt.sign({ _id: user._id }, key, { expiresIn: "10m" })
 
             // connect with the smtp Transport
             const transporter = nodemailer.createTransport({
