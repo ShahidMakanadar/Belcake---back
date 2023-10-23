@@ -67,12 +67,6 @@ app.get('/', async (req, res) => {
     res.send({ result: "Successfull..!" })
 
 })
-app.get('/demo', async (req, res) => {
-    
-    res.send({ result: "Successfull..! in demo page " })
-
-})
-
 
 //login and signup 
 app.post('/register', async (req, res) => {
