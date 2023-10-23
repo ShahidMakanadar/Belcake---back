@@ -20,8 +20,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 app.use(cors({
-    origin: 'https://belcake-shahidmakanadar.vercel.app/', // Replace with your frontend's domain
-    // credentials: true, // Set to true if your frontend sends cookies
+    origin: 'https://belcake-shahidmakanadar.vercel.app', // Replace with your frontend's domain
+    credentials: true, // Set to true if your frontend sends cookies
+    methods: "GET, POST, PUT, DELETE",
+    allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept",
 }));
 
 
