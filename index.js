@@ -21,7 +21,7 @@ app.use(express.json());
 // app.use(express.urlencoded({extended: true}))
 
 app.use(cors(
-    { origin: 'https://belcake-shahidmakanadar.vercel.app'}
+    { origin: 'https://belcake.vercel.app'}
  ))
 
 //cloudinary setUp
@@ -420,7 +420,7 @@ app.post('/forgotPassword', async (req, res) => {
                 from: process.env.EMAIL_FROM,// sender address
                 to: `${user.email}`, // receivers address
                 subject: "Belcake Terdal", // Subject line
-                text: `https://belcake-shahidmakanadar.vercel.app/forgot-password/${user._id}/${token}`, // plain text body
+                text: `https://belcake.vercel.app/forgot-password/${user._id}/${token}`, // plain text body
                 // html: "<h4>Open above link and set your new password....!</h4>", // html body
             };
 
