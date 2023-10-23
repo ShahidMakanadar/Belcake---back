@@ -64,18 +64,9 @@ const instance = new Razorpay({
   
 // API start
 app.get('/', async (req, res) => {
-    try {
-        const data = await products.find();
-        if (data.length > 0) {
-            res.send(data)
-        } 
-        else {
-            res.send({ result: "data not found....!" })
-        }
-    }
-    catch (error) {
-        console.log(error)
-    }
+    
+    res.send({ result: "Successfull..!" })
+
 })
 
 
