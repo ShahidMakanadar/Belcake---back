@@ -20,7 +20,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 app.use(cors({
-    origin: 'http://localhost:3000', // Replace with your frontend's domain
+    origin: 'https://belcake-shahidmakanadar.vercel.app/', // Replace with your frontend's domain
     // credentials: true, // Set to true if your frontend sends cookies
 }));
 
@@ -430,7 +430,7 @@ app.post('/forgotPassword', async (req, res) => {
                 from: process.env.EMAIL_FROM,// sender address
                 to: `${user.email}`, // receivers address
                 subject: "Belcake Terdal", // Subject line
-                text: `http://localhost:3000/forgot-password/${user._id}/${token}`, // plain text body
+                text: `https://belcake-shahidmakanadar.vercel.app/forgot-password/${user._id}/${token}`, // plain text body
                 // html: "<h4>Open above link and set your new password....!</h4>", // html body
             };
 
