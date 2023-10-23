@@ -1052,4 +1052,4 @@ app.get('/searchViewOrder/:key', async (req, res) => {
 
 
 
-app.listen(process.env.PORT || process.env.LOCAL_PORT) 
+app.listen(process.env.PORT || 10000) 
