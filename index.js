@@ -19,12 +19,12 @@ const crypto = require('crypto');
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
+
 app.use(cors({
-    origin: 'https://belcake-shahidmakanadar.vercel.app', // Replace with your frontend's domain
+    origin: 'https://belcake-shahidmakanadar.vercel.app', // Allow requests from this origin
     methods: "GET, POST, PUT, DELETE",
     allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept",
 }));
-
 
 //cloudinary setUp
 const cloudinary = cloudinaryModule.v2;
