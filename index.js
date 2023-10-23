@@ -18,13 +18,11 @@ const crypto = require('crypto');
 //express runnig setUp or intigration
 const app = express();
 app.use(express.json());
-app.use(express.urlencoded({extended: true}))
+// app.use(express.urlencoded({extended: true}))
 
 app.use(cors({
-    origin: '*', // Allow requests from any origin
-    methods: "GET, POST, PUT, DELETE",
-    allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept",
-  }));
+    origin: 'https://belcake-shahidmakanadar.vercel.app/',
+}));
 
 //cloudinary setUp
 const cloudinary = cloudinaryModule.v2;
