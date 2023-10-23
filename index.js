@@ -261,7 +261,7 @@ app.post('/sendEmail', async (req, res) => {
         });
         // send mail with defined transport object
         let detailes = {
-            from: process.env.EMAIL_FROM,// sender address
+            from: contactEmail,// sender address
             to: process.env.EMAIL_FROM, // list of receivers
             subject: `${quiry}`, // Subject line
             text: `${message}`, // plain text body
