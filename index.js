@@ -259,12 +259,14 @@ app.post('/sendEmail', async (req, res) => {
                 pass: process.env.USER_PASS,
             }
         });
+        const EmailmessageUser = `\n*User-Email : ${contactEmail} \n*Message : ${message} `
+        ;
         // send mail with defined transport object
         let detailes = {
             from: process.env.EMAIL_FROM,// sender address
-            to: contactEmail, // list of receivers
+            to: process.env.EMAIL_FROM , // list of receivers
             subject: `${quiry}`, // Subject line
-            text: `${message}`, // plain text body
+            text: EmailmessageUser, // plain text body
             // html: "<b>Hello world?</b>", // html body
         };
         transporter.sendMail(detailes, async (err) => {
