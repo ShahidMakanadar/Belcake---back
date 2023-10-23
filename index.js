@@ -63,7 +63,6 @@ const instance = new Razorpay({
   
 // API start
 app.get('/', async (req, res) => {
-    
     res.send({ result: "Successfull..!" })
 
 })
